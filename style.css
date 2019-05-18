@@ -390,14 +390,14 @@ footer h6{
 
     
     .iron-title, #contact{
-        margin-top: 20em;
+        margin-top: 15em;
     }
 }
 
 @media only screen and (max-width: 375px) {
 
     .iron-title, #contact{
-        margin-top: 38em;
+        margin-top: 42em;
     }
 
     .contact-info{
