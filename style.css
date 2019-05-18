@@ -350,6 +350,10 @@ footer h6{
         margin-left: 0;
         padding-top: 4em;
     }
+    
+    #cold{
+        margin-bottom: 2em;   
+    }    
 
     .cold-boxes, .iron-boxes, #contact{
         display: block;
