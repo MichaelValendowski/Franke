@@ -5,8 +5,7 @@
 }
 
 section{
-    padding: 4em 0;
-    min-height: 30em;
+    min-height: 40em;
 }
 
 h2{
@@ -66,6 +65,15 @@ nav{
     justify-content: space-between;
     width: 95%;
     border-bottom: 1px solid white;
+}
+
+.menu-toggle{
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
 }
 
 .navigation.black{
@@ -143,10 +151,11 @@ i{
 
 #about{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-box img{
-    
     max-height: 25em;
     object-fit: cover;
     margin-left: 6em;
@@ -202,13 +211,12 @@ i{
     margin-bottom: 1.5em;
 }
 
-.cold-boxes{
+.cold-boxes, .iron-boxes{
     display: flex;
 }
 
 .cold-box, .iron-box{
-    margin: 0 2em;
-    padding: 0 2em;
+    padding: 0 4em;
     line-height: 1.6;
     text-align: center;
 }
@@ -218,12 +226,15 @@ i{
     border-right: 1px solid black;
 }
 
-.cold-content{
+#cold{
     display: flex;
     flex-direction: column;
-    height: 30em;
     justify-content: center;
     align-items: center
+}
+
+.cold-content{
+    text-align: center;
 }
 
 #iron{
@@ -234,7 +245,7 @@ i{
     align-items: center
 }
 
-.iron-boxes{
+.cold-boxes{
     display: flex;
 }
 
@@ -287,3 +298,109 @@ footer h6{
     transform: scale(1.05);
 }
 
+@media only screen and (max-width: 810px) {
+
+    .menu-toggle{
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,.95);
+        left: 0;
+        transition: 0.5s;
+    }
+
+    nav.active .menu{
+        display: block;
+    }
+
+    .menu li{
+        display: block;
+        text-align: center;
+        position: relative;
+        top: 3em;
+        margin: 2em 0;
+    }
+
+    .main-content{
+        align-items: center;
+        text-align: center;
+    }
+
+    h2.main-title {
+        font-size: 1.5em;
+    }
+
+    .break{
+        display: none;
+    }
+
+    #about{
+        display: block;
+    }
+
+    .about-box img{
+        margin-left: 0;
+        padding-top: 4em;
+    }
+
+    .cold-boxes, .iron-boxes, #contact{
+        display: block;
+    }
+
+    .cold-box, .iron-box{
+        margin: 2em 0;
+    }
+
+    section{
+        padding: 2em 0
+    }
+
+    .cold-box:nth-of-type(2n){
+        border: none;
+    }
+    
+    #contact{
+        text-align: center;
+    }
+
+    .contact-box{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 605px) {
+
+
+    .btn{
+        margin: 1em 0;
+    }
+
+    h2{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    
+    .iron-title, #contact{
+        margin-top: 10em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .iron-title, #contact{
+        margin-top: 38em;
+    }
+
+    .contact-info{
+        font-size: 1em;
+    }
+}
